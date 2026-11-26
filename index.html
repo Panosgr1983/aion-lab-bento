@@ -1,0 +1,37 @@
+<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STHIRA SUKHA YOGA SHALA — Yoga Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&family=Fraunces:ital,opsz,wght@1,9..144,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+:root{--ink:#1A211C;--paper:#E5E7EB;--accent:#7BA05B;--soft:#E5E7EB}
+body{background:var(--soft);color:var(--ink);font-family:Outfit,sans-serif;font-weight:300;padding:16px}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(120px,auto);gap:12px;min-height:calc(100vh - 32px)}
+@media(max-width:900px){.bento{grid-template-columns:1fr 1fr}}
+.cell{background:var(--paper);border-radius:20px;padding:clamp(20px,3vw,36px);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
+.cell-nav{grid-column:span 4;flex-direction:row;align-items:center;justify-content:space-between;padding:20px clamp(20px,3vw,36px)}
+@media(max-width:900px){.cell-nav{grid-column:span 2}}
+.cell-nav .logo{font-weight:600;letter-spacing:-.02em;font-size:1.05rem}
+.cell-nav nav{display:flex;gap:24px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.cell-nav a{color:var(--ink);text-decoration:none;opacity:.6}
+.cell-hero{grid-column:span 3;grid-row:span 2;background:var(--ink);color:var(--paper);justify-content:flex-end}
+@media(max-width:900px){.cell-hero{grid-column:span 2}}
+.cell-hero h1{font-size:clamp(2.4rem,6vw,5.5rem);line-height:.95;letter-spacing:-.03em;font-weight:200}
+.cell-hero h1 em{font-family:Fraunces,serif;font-style:italic;font-weight:400;color:var(--accent)}
+.cell-img{grid-row:span 2;padding:0}
+.cell-img img{width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){.cell-img{grid-row:span 1;min-height:200px}}
+.cell-stat{background:var(--accent);color:var(--paper)}
+.cell-stat b{font-size:clamp(2rem,4vw,3.4rem);font-weight:200;line-height:1}
+.cell-stat span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+.cell-cta{border:1px solid color-mix(in srgb,var(--ink) 20%,transparent);justify-content:center;align-items:center;text-align:center;cursor:pointer;transition:.3s}
+.cell-cta:hover{background:var(--ink);color:var(--paper)}
+.cell-cta span{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase}
+</style></head><body>
+<div class="bento">
+  <div class="cell cell-nav"><div class="logo">STHIRA SUKHA YOGA SHALA</div><nav><a href="#">Πρόγραμμα</a><a href="#">Χώρος</a><a href="#ep">Επικοινωνία</a></nav></div>
+  <div class="cell cell-hero"><h1>STHIRA SUKHA YOGA SHALA<br><em>Γαλάτσι.</em></h1></div>
+  <div class="cell cell-img"><img src="img/yoga-u01.jpg" alt=""></div>
+  <div class="cell cell-stat"><b>01</b><span>Yoga Studio</span></div>
+  <div class="cell cell-cta" onclick="location.hash='ep'"><span>Κλείσε θέση →</span></div>
+</div>
+</body></html>
